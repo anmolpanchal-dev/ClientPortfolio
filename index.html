@@ -9,26 +9,37 @@
       rel="stylesheet"
     />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style/navbar.css" />
     <link rel="stylesheet" href="style/hero.css" />
+    <link rel="stylesheet" href="style/card.css" />
+    <link rel="stylesheet" href="style/about.css" />
+    <link rel="stylesheet" href="style/experience.css" />
   </head>
   <body>
     <!-- Navbar -->
     <nav id="navbar">
       <div id="name">
-        <h2>Portfolio</h2>
+        <h2>Abhishek Panchal</h2>
       </div>
 
       <div id="sections">
         <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Experience</a>
-        <a href="#">Skills</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#">Achievements</a>
-        <a href="#">Contact</a>
+        <a class="contact-btn2">Contact</a>
 
         <button class="connect-btn">
           <i class="ri-user-line"></i>
@@ -40,16 +51,342 @@
         <i class="ri-menu-3-line"></i>
       </div>
     </nav>
+
     <div id="overlay"></div>
 
     <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="hero-left">
+          <span class="badge"> Retail Operations Professional </span>
 
-    <div id="hero-main">
+          <h1>Leading Retail Operations with Excellence</h1>
 
-        
+          <p>
+            Experienced Head Cashier with 5+ years of expertise in retail
+            operations, billing, cash management, team supervision, and customer
+            satisfaction.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="primary-btn"> Contact Me </a>
+
+            <a
+              href="file/Abhishek_PanchalCV.pdf"
+              download
+              class="secondary-btn"
+            >
+              Download Resume
+            </a>
+          </div>
+
+          <div class="stats">
+            <div class="card">
+              <h2>5+</h2>
+              <p>Years Experience</p>
+            </div>
+
+            <div class="card">
+              <h2>3</h2>
+              <p>Retail Companies</p>
+            </div>
+
+            <div class="card">
+              <h2>100%</h2>
+              <p>Customer Focus</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <img src="assets/profile-img2.png" alt="Abhishek Panchal" />
+        </div>
+      </div>
+    </section>
+
+    <!-- contact card -->
+    <div id="contactModal" class="contact-modal">
+      <div class="contact-card">
+        <button id="closeModal" class="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <h2>Let's Connect</h2>
+
+        <p>
+          Feel free to contact me for opportunities, collaborations or
+          professional discussions.
+        </p>
+
+        <div class="contact-info">
+          <div class="info">
+            <i class="bx bxs-phone-call"></i>
+            <span>+91 9205816821</span>
+          </div>
+
+          <div class="info">
+            <i class="bx bxs-envelope"></i>
+            <span>abhipanchal1125@gmail.com</span>
+          </div>
+
+          <div class="info">
+            <i class="bx bxs-map"></i>
+            <span>Faridabad, Haryana – 121005</span>
+          </div>
+        </div>
+
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/abhishek-panchal-64ab8b1a3?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+            <i class="bx bxl-linkedin"></i>
+            LinkedIn
+          </a>
+
+          <a href="#">
+            <i class="bx bxl-whatsapp"></i>
+            WhatsApp
+          </a>
+        </div>
+      </div>
     </div>
+
+
+    <!-- About Section -->
+
+<section class="about" id="about">
+
+    <div class="about-heading">
+
+        <span>ABOUT ME</span>
+
+        <h2>
+            Know Me Better
+        </h2>
+
+    </div>
+
+    <div class="about-content">
+
+        <div class="about-text">
+
+            <small>WHO I AM</small>
+
+            <h3>
+
+                Trusted Retail Operations
+                Professional
+
+            </h3>
+
+            <p>
+
+                With over five years of experience in retail operations,
+                I specialize in delivering exceptional customer service,
+                efficient cash handling, billing management,
+                and team coordination.
+
+                My focus is to ensure smooth store operations,
+                maintain SOP compliance, and create
+                outstanding shopping experiences while
+                leading teams with professionalism.
+
+            </p>
+
+            <div class="qualities" id="skills">
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Customer Service Excellence
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Cash Handling & Billing
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Retail Store Operations
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Team Leadership
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    SOP Compliance
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Customer Satisfaction
+                </div>
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Sales Support & Upselling 
+                </div>
+                <!-- <div>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                     
+                </div> -->
+
+            </div>
+
+            <blockquote>
+
+                "Committed to creating seamless retail experiences
+                through leadership, operational excellence,
+                and customer-first service."
+
+            </blockquote>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TimeLine -->
+
+<section class="experience" id="experience">
+
+    <div class="experience-heading">
+
+        <span>CAREER JOURNEY</span>
+
+        <h2>Professional Experience</h2>
+
+        <p>
+            A progressive career in retail operations, customer service,
+            cash management, and team leadership across leading retail brands.
+        </p>
+
+    </div>
+
+    <div class="timeline">
+
+        <!-- Current Experience -->
+
+        <div class="timeline-item left reveal">
+
+            <div class="timeline-dot">
+                <i class="fa-solid fa-glasses"></i>
+            </div>
+
+            <div class="timeline-card">
+
+                <span class="year">Present</span>
+
+                <h3>Trainee – Staff Sales</h3>
+
+                <h4>Lenskart</h4>
+
+                <ul>
+
+                    <li>Assisting customers in selecting eyewear based on their needs.</li>
+
+                    <li>Providing personalized product recommendations and styling assistance.</li>
+
+                    <li>Supporting daily store operations and inventory management.</li>
+
+                    <li>Maintaining visual merchandising standards and store presentation.</li>
+
+                    <li>Working closely with the sales team to deliver an outstanding customer experience.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Pantaloons -->
+
+        <div class="timeline-item right reveal">
+
+            <div class="timeline-dot">
+                <i class="fa-solid fa-cash-register"></i>
+            </div>
+
+            <div class="timeline-card">
+
+                <span class="year">2025 - 2026</span>
+
+                <h3>Head Cashier</h3>
+
+                <h4>Pantaloons – Aditya Birla Fashion & Retail Ltd.</h4>
+
+                <ul>
+
+                    <li>Managed daily cash counter operations and smooth billing processes.</li>
+
+                    <li>Supervised the cashier team to ensure fast and accurate customer checkout.</li>
+
+                    <li>Handled customer queries and resolved issues professionally.</li>
+
+                    <li>Performed daily cash reconciliation and maintained accurate financial records.</li>
+
+                    <li>Supported floor operations during peak hours while ensuring SOP compliance.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Airplaza -->
+
+        <div class="timeline-item left reveal">
+
+            <div class="timeline-dot">
+                <i class="fa-solid fa-store"></i>
+            </div>
+
+            <div class="timeline-card">
+
+                <span class="year">2020 - 2025</span>
+
+                <h3>Cashier</h3>
+
+                <h4>Airplaza Retail Holding Pvt. Ltd.</h4>
+
+                <ul>
+
+                    <li>Handled high-volume billing transactions and cash handling responsibilities.</li>
+
+                    <li>Delivered fast and efficient customer checkout services.</li>
+
+                    <li>Maintained accurate billing records and balanced daily cash flow.</li>
+
+                    <li>Supported store operations during busy retail hours.</li>
+
+                    <li>Resolved customer queries to ensure a positive shopping experience.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
 
     <script src="script/navbar.js"></script>
     <script src="script/hero.js"></script>
+    <script src="script/card.js"></script>
+    <script src="script/about.js"></script>
+    <script src="script/experience.js"></script>
   </body>
 </html>
