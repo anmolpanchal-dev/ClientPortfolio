@@ -1,7 +1,3 @@
-/*======================================
-            PREMIUM LOADER
-======================================*/
-
 const loader = document.getElementById("loader");
 
 const progressFill = document.querySelector(".progress-fill");
@@ -11,11 +7,6 @@ const progressText = document.querySelector(".progress-text");
 const particlesContainer = document.querySelector(".particles");
 
 const loaderTitle = document.querySelector(".loader-title");
-
-/*======================================
-        RANDOM PARTICLES
-======================================*/
-
 for(let i=0;i<120;i++){
 
     const p = document.createElement("span");
@@ -38,11 +29,6 @@ for(let i=0;i<120;i++){
     particlesContainer.appendChild(p);
 
 }
-
-/*======================================
-        LOADING TEXT
-======================================*/
-
 const texts=[
 
 "Initializing Portfolio",
@@ -78,11 +64,6 @@ setInterval(()=>{
     },300);
 
 },1200);
-
-/*======================================
-            PROGRESS
-======================================*/
-
 let progress=0;
 
 const interval=setInterval(()=>{
@@ -109,11 +90,6 @@ const interval=setInterval(()=>{
     }
 
 },90);
-
-/*======================================
-        FINISH
-======================================*/
-
 function finishLoader(){
 
     loader.style.transition=

@@ -1,21 +1,16 @@
-/* ==========================================================================
-   GLOBAL RESET (This fixes the horizontal scrollbar issue)
-   ========================================================================== */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Base reset for body to ensure no unwanted overflows */
+ 
 html, body {
   width: 100%;
   overflow-x: hidden;
 }
 
-/* ==========================================================================
-   THEME VARIABLES
-   ========================================================================== */
 :root {
   --bg-dark-primary: #07160F;
   --bg-dark-secondary: #0F241B;
@@ -29,14 +24,11 @@ html, body {
   --transition-smooth: 0.35s ease;
 }
 
-/* ==========================================================================
-   HERO SECTION WRAPPER
-   ========================================================================== */
 .hero {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 80px 0; /* Padding balanced for content */
+  padding: 80px 0;  
   
   display: flex;
   align-items: center;
@@ -46,7 +38,7 @@ html, body {
   overflow: hidden; 
 }
 
-/* Decorative Background Elements */
+ 
 .hero::before {
   content: "";
   position: absolute;
@@ -75,9 +67,6 @@ html, body {
   pointer-events: none;
 }
 
-/* ==========================================================================
-   CONTAINER / LAYOUT
-   ========================================================================== */
 .hero-content {
   width: 100%;
   max-width: 1200px;
@@ -93,9 +82,6 @@ html, body {
   z-index: 2;
 }
 
-/* ==========================================================================
-   LEFT COLUMN (Content & Typography)
-   ========================================================================== */
 .hero-left {
   flex: 1.2;
   min-width: 0;
@@ -134,9 +120,6 @@ html, body {
   margin-bottom: 40px;
 }
 
-/* ==========================================================================
-   BUTTONS
-   ========================================================================== */
 .hero-buttons {
   display: flex;
   align-items: center;
@@ -191,9 +174,6 @@ html, body {
   box-shadow: 0 15px 30px var(--accent-gold-glow);
 }
 
-/* ==========================================================================
-   STATS SECTION
-   ========================================================================== */
 .stats {
   display: flex;
   gap: 20px;
@@ -233,9 +213,6 @@ html, body {
   line-height: 1.4;
 }
 
-/* ==========================================================================
-   RIGHT COLUMN (Visual Image Section)
-   ========================================================================== */
 .hero-right {
   flex: 0.8;
   display: flex;
@@ -271,9 +248,6 @@ html, body {
   transition: transform var(--transition-smooth);
 }
 
-/* ==========================================================================
-   RESPONSIVE BREAKPOINTS
-   ========================================================================== */
 
 @media (min-width: 901px) {
   .hero-right {
@@ -320,7 +294,7 @@ html, body {
   
   .card {
     flex: unset;
-    /* Correct gap calculation with border-box */
+     
     width: calc(50% - 10px); 
   }
 
@@ -355,7 +329,7 @@ html, body {
   }
 
   .card {
-    width: 100%; /* Single column stack */
+    width: 100%;  
   }
 
   .hero-right img {

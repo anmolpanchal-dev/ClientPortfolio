@@ -5,10 +5,6 @@
 const aboutSection = document.querySelector(".about");
 const qualityCards = document.querySelectorAll(".qualities div");
 
-/*==========================
-    SCROLL REVEAL
-==========================*/
-
 const aboutObserver = new IntersectionObserver((entries) => {
 
     entries.forEach((entry) => {
@@ -27,10 +23,6 @@ const aboutObserver = new IntersectionObserver((entries) => {
 
 aboutObserver.observe(aboutSection);
 
-
-/*==========================
-    STAGGER CARD ANIMATION
-==========================*/
 
 const cardObserver = new IntersectionObserver((entries)=>{
 
@@ -58,10 +50,6 @@ const cardObserver = new IntersectionObserver((entries)=>{
 
 cardObserver.observe(document.querySelector(".qualities"));
 
-
-/*==========================
-        CARD TILT
-==========================*/
 
 qualityCards.forEach((card)=>{
 

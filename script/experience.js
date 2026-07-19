@@ -1,14 +1,7 @@
-/*====================================
-        EXPERIENCE SECTION
-====================================*/
 
 const timelineItems = document.querySelectorAll(".timeline-item");
 const timelineCards = document.querySelectorAll(".timeline-card");
 const timeline = document.querySelector(".timeline");
-
-/*====================================
-        SCROLL REVEAL
-====================================*/
 
 const experienceObserver = new IntersectionObserver((entries) => {
 
@@ -31,10 +24,6 @@ timelineItems.forEach((item)=>{
 });
 
 
-/*====================================
-        ACTIVE CARD
-====================================*/
-
 timelineCards.forEach((card)=>{
 
     card.addEventListener("mouseenter",()=>{
@@ -49,10 +38,6 @@ timelineCards.forEach((card)=>{
 
 });
 
-
-/*====================================
-        3D CARD EFFECT
-====================================*/
 
 timelineCards.forEach((card)=>{
 
@@ -84,10 +69,6 @@ timelineCards.forEach((card)=>{
 
 });
 
-
-/*====================================
-        TIMELINE LINE FILL
-====================================*/
 
 window.addEventListener("scroll",()=>{
 

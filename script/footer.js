@@ -1,7 +1,3 @@
-/*==================================
-        FOOTER
-==================================*/
-
 const scrollBtn = document.querySelector(".scroll-top");
 
 // Scroll to Top
@@ -37,10 +33,6 @@ window.addEventListener("scroll", () => {
 
 });
 
-
-/*==================================
-        CURRENT YEAR
-==================================*/
 
 const year = new Date().getFullYear();
 
