@@ -1,75 +1,112 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const loader = document.getElementById("loader");
-  const storeIcon = document.getElementById("store-icon");
-  const graphPath = document.getElementById("graph-path");
-  const checkIcon = document.getElementById("check-icon");
-  const progressFill = document.querySelector(".progress-fill");
-  const progressText = document.querySelector(".progress-text");
-  const loaderBottom = document.querySelector(".loader-bottom");
+const loader = document.getElementById("loader");
 
-  // SVG Path Definition for "AP" Monogram Initials
-  const apMonogramPath = "M 32 110 L 52 50 L 72 110 M 41 85 H 63 M 92 110 V 50 H 122 C 132 50 132 80 122 80 H 92";
+const progressFill = document.querySelector(".progress-fill");
 
-  // Timeline Controller
-  let progress = 0;
-  const duration = 2800; // 2.8 Seconds total
-  const intervalTime = 30;
-  const increment = 100 / (duration / intervalTime);
+const progressText = document.querySelector(".progress-text");
 
-  // Sequence 1: Store Icon Fades In Immediately
-  requestAnimationFrame(() => {
-    storeIcon.classList.add("visible");
-  });
+const particlesContainer = document.querySelector(".particles");
 
-  // Sequence 2: Graph Starts Drawing
-  setTimeout(() => {
-    graphPath.classList.add("drawing");
-  }, 400);
+const loaderTitle = document.querySelector(".loader-title");
+for(let i=0;i<120;i++){
 
-  // Sequence 3: Checkmark Appears at Peak
-  setTimeout(() => {
-    checkIcon.classList.add("visible");
-  }, 1500);
+    const p = document.createElement("span");
 
-  // Sequence 5: Progress Bar Interval (0% to 100%)
-  const progressInterval = setInterval(() => {
-    progress += increment;
-    
-    if (progress >= 100) {
-      progress = 100;
-      clearInterval(progressInterval);
-      executeCompletionSequence();
+    p.className="particle";
+
+    p.style.left=Math.random()*100+"%";
+
+    p.style.top=Math.random()*100+"%";
+
+    p.style.animationDelay=Math.random()*5+"s";
+
+    p.style.animationDuration=4+Math.random()*6+"s";
+
+    p.style.opacity=Math.random();
+
+    p.style.transform=
+    `scale(${Math.random()*1.6})`;
+
+    particlesContainer.appendChild(p);
+
+}
+const texts=[
+
+"Initializing Portfolio",
+
+"Loading Experience",
+
+"Preparing Interface",
+
+"Almost Ready"
+
+];
+
+let txt=0;
+
+setInterval(()=>{
+
+    loaderTitle.style.opacity=0;
+
+    setTimeout(()=>{
+
+        txt++;
+
+        if(txt>=texts.length){
+
+            txt=0;
+
+        }
+
+        loaderTitle.innerHTML=texts[txt];
+
+        loaderTitle.style.opacity=1;
+
+    },300);
+
+},1200);
+let progress=0;
+
+const interval=setInterval(()=>{
+
+    progress+=Math.random()*4;
+
+    if(progress>100){
+
+        progress=100;
+
     }
 
-    progressFill.style.width = `${progress}%`;
-    progressText.textContent = `${Math.floor(progress)}%`;
-  }, intervalTime);
+    progressFill.style.width=progress+"%";
 
-  // Sequence 6: Transformation to "AP" & Exit Transition
-  function executeCompletionSequence() {
-    setTimeout(() => {
-      // Hide Store & Checkmark
-      storeIcon.classList.add("fade-out");
-      checkIcon.classList.add("fade-out");
-      loaderBottom.style.opacity = "0";
+    progressText.innerHTML=
+    Math.floor(progress)+"%";
 
-      // Morph Graph Path into "AP" Monogram
-      graphPath.setAttribute("d", apMonogramPath);
-      graphPath.style.stroke = "#FFFFFF";
-      graphPath.style.strokeWidth = "3px";
+    if(progress>=100){
 
-      // Final Fade Out & Removal
-      setTimeout(() => {
-        loader.classList.add("completed");
-        document.body.style.overflow = "auto";
-        setTimeout(() => {
-          loader.remove();
-        }, 800);
-      }, 700);
+        clearInterval(interval);
 
-    }, 200);
-  }
+        finishLoader();
 
-  // Prevent Scrolling While Loading
-  document.body.style.overflow = "hidden";
-});
+    }
+
+},90);
+function finishLoader(){
+
+    loader.style.transition=
+    "opacity .8s ease,transform 1s ease";
+
+    loader.style.opacity=0;
+
+    loader.style.transform="scale(1.08)";
+
+    document.body.style.overflow="auto";
+
+    setTimeout(()=>{
+
+        loader.remove();
+
+    },900);
+
+}
+
+document.body.style.overflow="hidden";
