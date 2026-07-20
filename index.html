@@ -59,82 +59,38 @@
     <meta name="theme-color" content="#07160F" />
   </head>
   <body>
-    <div id="loader">
-      <!-- Animated Background -->
-      <div class="loader-bg">
-        <div class="noise"></div>
+<div id="loader" aria-label="Loading Portfolio" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+  <div class="loader-ambient"></div>
 
-        <div class="gradient"></div>
+  <div class="loader-stage">
+    <svg class="loader-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Step 1: Retail Store Icon -->
+      <g id="store-icon" class="stage-element">
+        <path class="store-roof" d="M 30 54 L 80 26 L 130 54 L 30 54 Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="store-body" d="M 38 54 V 110 H 122 V 54" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="store-door" d="M 68 110 V 80 H 92 V 110" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
 
-        <div class="grid"></div>
+      <!-- Step 2: Line Graph & Step 6: Initial Transformation ("AP") -->
+      <path id="graph-path" class="stage-element" d="M 25 105 L 55 90 L 85 95 L 115 65 L 135 50" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
-        <div class="scan"></div>
-      </div>
+      <!-- Step 3: Glowing Checkmark -->
+      <g id="check-icon" class="stage-element">
+        <circle cx="138" cy="46" r="12" fill="#07160F" stroke="#16A34A" stroke-width="1.5" />
+        <path d="M 132 46 L 136 50 L 144 42" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </svg>
+  </div>
 
-      <!-- Floating Particles -->
-      <div class="particles">
-        <!-- JS will generate particles -->
-      </div>
-
-      <!-- Center Stage -->
-      <div class="loader-stage">
-        <!-- Glow -->
-        <div class="glow glow-1"></div>
-        <div class="glow glow-2"></div>
-
-        <!-- Energy Rings -->
-
-        <div class="rings">
-          <span class="ring outer"></span>
-
-          <span class="ring middle"></span>
-
-          <span class="ring inner"></span>
-        </div>
-
-        <!-- Logo -->
-
-        <div class="logo-wrapper">
-          <div class="logo-border"></div>
-
-          <div class="logo">
-            <h1>AP</h1>
-          </div>
-        </div>
-
-        <!-- Energy Dots -->
-
-        <div class="orbit">
-          <span></span>
-
-          <span></span>
-
-          <span></span>
-
-          <span></span>
-        </div>
-      </div>
-
-      <!-- Bottom Content -->
-
-      <div class="loader-bottom">
-        <p class="loader-title">Building Premium Experience</p>
-
-        <div class="progress">
-          <div class="progress-track">
-            <div class="progress-fill"></div>
-          </div>
-
-          <span class="progress-text"> 0% </span>
-        </div>
-      </div>
-
-      <!-- Decorative Light -->
-
-      <div class="light-left"></div>
-
-      <div class="light-right"></div>
+  <!-- Step 4 & 5: Text & Progress Bar -->
+  <div class="loader-bottom">
+    <p class="loader-title">Optimizing Retail Performance...</p>
+    <div class="progress-track">
+      <div class="progress-fill"></div>
     </div>
+    <span class="progress-text">0%</span>
+  </div>
+</div>
 
     <!-- Navbar -->
     <nav id="navbar">
