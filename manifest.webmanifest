@@ -9,10 +9,9 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "assets/man.png",
-      "sizes": "any",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
     }
   ]
 }
