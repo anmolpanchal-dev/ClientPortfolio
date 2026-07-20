@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         loader.classList.add("completed");
         document.body.style.overflow = "auto";
-
         setTimeout(() => {
           loader.remove();
         }, 800);
